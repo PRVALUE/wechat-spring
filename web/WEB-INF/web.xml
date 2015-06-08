@@ -7,11 +7,29 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    <!---            servlets                -->
     <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>2</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>Core Servlet</servlet-name>
+        <servlet-class>test.CoreServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OAuth2 Servlet</servlet-name>
+        <servlet-class>test.OAuth2Servlet</servlet-class>
+    </servlet>
+    <!---            mapping                -->
+    <servlet-mapping>
+        <servlet-name>Core Servlet</servlet-name>
+        <url-pattern>/core</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OAuth2 Servlet</servlet-name>
+        <url-pattern>/oauth2</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -21,7 +39,4 @@
             30
         </session-timeout>
     </session-config>
-    <welcome-file-list>
-        <welcome-file>redirect.jsp</welcome-file>
-    </welcome-file-list>
 </web-app>

@@ -13,15 +13,22 @@
         <title>Enter Your Name</title>
     </head>
     <body>
-        <h1>Enter Your Name</h1>
-        <spring:nestedPath path="name">
-            <form action="" method="post">
-                Name:
-                <spring:bind path="value">
-                    <input type="text" name="${status.expression}" value="${status.value}">
-                </spring:bind>
-                <input type="submit" value="OK">
-            </form>
-        </spring:nestedPath>
+        <div align='center'>
+            <h1>
+		WELCOME TO SPRING MVC APP
+		<a href="contacts.html">查看wechat企业号通讯录</a><br>
+		<a href="messages.html">查看wechat企业号消息</a>
+            </h1>
+            <h3>Enter Your Name</h3>
+            <spring:nestedPath path="name">
+                <form action="" method="post">
+                    Name:
+                    <spring:bind path="value">
+                        <input type="text" name="${status.expression}" value="${status.value}">
+                    </spring:bind>
+                    <input type="submit" value="OK">
+                </form>
+            </spring:nestedPath>
+	</div>
     </body>
 </html>

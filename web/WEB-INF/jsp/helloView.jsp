@@ -13,5 +13,7 @@
     </head>
     <body>
         <h1>${helloMessage}</h1>
+        <h2>${accessToken}</h2>
+        <h2>${employees}</h2>
     </body>
 </html>
